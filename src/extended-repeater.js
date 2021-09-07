@@ -24,6 +24,12 @@ export default function repeater(str, options) {
       additionSeparator = (options.additionSeparator || '|'),
       additionRepeatTimes = (options.additionRepeatTimes || 1);
   
+  if (options.addition === false) {
+    addition = 'false';
+  } else if (options.addition === null) {
+    addition = 'null';
+  }
+  
   let arr = [],
       additionArr = [];
   
